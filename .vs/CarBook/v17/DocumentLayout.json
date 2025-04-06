@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\CarBook\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\aboutscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\aboutscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\handlers\\abouthandlers\\updateaboutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\handlers\\abouthandlers\\updateaboutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\handlers\\abouthandlers\\removeaboutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\handlers\\abouthandlers\\removeaboutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +43,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-06T18:13:28.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Program.cs",
+              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Program.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAQwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T17:51:13.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AboutsController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\AboutsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\AboutsController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\AboutsController.cs",
+              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\AboutsController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T17:53:24.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateAboutCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\UpdateAboutCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\UpdateAboutCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\UpdateAboutCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\UpdateAboutCommandHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T17:27:12.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RemoveAboutCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\RemoveAboutCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\RemoveAboutCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\RemoveAboutCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\AboutHandlers\\RemoveAboutCommandHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T17:23:04.288Z",
+              "EditorCaption": ""
             }
           ]
         },
