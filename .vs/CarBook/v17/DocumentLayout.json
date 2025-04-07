@@ -5,26 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\handlers\\carhandlers\\getcarwithbrandqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\handlers\\carhandlers\\getcarwithbrandqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\handlers\\carhandlers\\getcarqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\handlers\\carhandlers\\getcarqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\results\\carresults\\getcarwithbrandqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\results\\carresults\\getcarwithbrandqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\cqrs\\results\\carresults\\getcarqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\results\\carresults\\getcarqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,74 +36,9 @@
               "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Program.cs",
               "RelativeToolTip": "Presentation\\CarBook.WebApi\\Program.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwA8AAABHAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAACwAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:33:20.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAWwD8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:29:47.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetCarQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarQueryHandler.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:26:33.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetCarWithBrandQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarWithBrandQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarWithBrandQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarWithBrandQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Handlers\\CarHandlers\\GetCarWithBrandQueryHandler.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAawBcAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:26:21.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetCarQueryResult.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarQueryResult.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarQueryResult.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarQueryResult.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarQueryResult.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:24:46.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetCarWithBrandQueryResult.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarWithBrandQueryResult.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarWithBrandQueryResult.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarWithBrandQueryResult.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Results\\CarResults\\GetCarWithBrandQueryResult.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:24:26.799Z",
+              "WhenOpened": "2025-04-07T15:40:21.05Z",
               "EditorCaption": ""
             }
           ]
