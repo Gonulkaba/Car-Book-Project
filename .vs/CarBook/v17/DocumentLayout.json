@@ -3,68 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\CarBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\socialmediascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\socialmediascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\createservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\createservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\updatesocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\updatesocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\getservicebyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\getservicebyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\getsocialmediaqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\getsocialmediaqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\getservicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\getservicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\removesocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\removesocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\removeservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\removeservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\getsocialmediabyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\getsocialmediabyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\updateservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\servicehandlers\\updateservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\locationhandlers\\getlocationqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\locationhandlers\\getlocationqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\footeraddresshandlers\\getfooteraddressqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\footeraddresshandlers\\getfooteraddressqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\footeraddresshandlers\\getfooteraddressbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\footeraddresshandlers\\getfooteraddressbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\locationhandlers\\getlocationbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\locationhandlers\\getlocationbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\createpricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\createpricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\commands\\servicecommands\\updateservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\commands\\servicecommands\\updateservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\commands\\servicecommands\\removeservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\commands\\servicecommands\\removeservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\commands\\servicecommands\\createservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\commands\\servicecommands\\createservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\createsocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\socialmediahandlers\\createsocialmediacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -91,209 +51,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServicesController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\ServicesController.cs",
-              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\ServicesController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\ServicesController.cs*",
-              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\ServicesController.cs*",
-              "ViewState": "AQIAACMAAAAAAAAAAAAIwC8AAAAJAAAA",
+              "Title": "SocialMediasController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\SocialMediasController.cs",
+              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\SocialMediasController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\SocialMediasController.cs*",
+              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\SocialMediasController.cs*",
+              "ViewState": "AQIAACUAAAAAAAAAAAA0wC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:35:09.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetServiceQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:27:51.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetServiceByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceByIdQueryHandler.cs*",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\GetServiceByIdQueryHandler.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:27:23.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RemoveServiceCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\RemoveServiceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\RemoveServiceCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\RemoveServiceCommandHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\RemoveServiceCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:28:19.555Z",
+              "WhenOpened": "2025-04-09T17:46:48.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CreateServiceCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\CreateServiceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\CreateServiceCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\CreateServiceCommandHandler.cs*",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\CreateServiceCommandHandler.cs*",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wBUAAAAAAAAA",
+              "Title": "UpdateSocialMediaCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\UpdateSocialMediaCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\UpdateSocialMediaCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\UpdateSocialMediaCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\UpdateSocialMediaCommandHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:27:19.826Z",
+              "WhenOpened": "2025-04-09T17:44:40.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RemoveSocialMediaCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\RemoveSocialMediaCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\RemoveSocialMediaCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\RemoveSocialMediaCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\RemoveSocialMediaCommandHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:44:30.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetSocialMediaQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaQueryHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaQueryHandler.cs*",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaQueryHandler.cs*",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:43:56.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetSocialMediaByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaByIdQueryHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\GetSocialMediaByIdQueryHandler.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:43:10.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UpdateServiceCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\UpdateServiceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\UpdateServiceCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\UpdateServiceCommandHandler.cs*",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\ServiceHandlers\\UpdateServiceCommandHandler.cs*",
+              "Title": "CreateSocialMediaCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\CreateSocialMediaCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\CreateSocialMediaCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\CreateSocialMediaCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\SocialMediaHandlers\\CreateSocialMediaCommandHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:28:22.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetPricingQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:31:10.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetLocationQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationQueryHandler.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:31:05.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetFooterAddressQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressQueryHandler.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:31:02.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetFooterAddressByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressByIdQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\FooterAddressHandlers\\GetFooterAddressByIdQueryHandler.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:30:47.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GetLocationByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationByIdQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\LocationHandlers\\GetLocationByIdQueryHandler.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:30:42.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetPricingByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:30:16.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreatePricingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:29:20.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UpdateServiceCommand.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\UpdateServiceCommand.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\UpdateServiceCommand.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\UpdateServiceCommand.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\UpdateServiceCommand.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:27:07.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RemoveServiceCommand.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\RemoveServiceCommand.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\RemoveServiceCommand.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\RemoveServiceCommand.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\RemoveServiceCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:27:04.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CreateServiceCommand.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\CreateServiceCommand.cs",
-              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\CreateServiceCommand.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\CreateServiceCommand.cs",
-              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Commands\\ServiceCommands\\CreateServiceCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:26:59.867Z",
+              "WhenOpened": "2025-04-09T17:42:49.894Z",
               "EditorCaption": ""
             }
           ]
