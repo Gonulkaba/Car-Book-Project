@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\CarBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\pc\\desktop\\carbook\\presentation\\carbook.webapi\\controllers\\pricingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6589F899-6592-4518-9E6D-C096132981AA}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\pricingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\removepricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\removepricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\updatepricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\updatepricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\getpricingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\pc\\desktop\\carbook\\core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\createpricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C88EF4C-340B-49D8-B4B8-E1BC1C31E183}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\mediator\\handlers\\pricinghandlers\\createpricingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +51,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LocationsController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\LocationsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\LocationsController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\LocationsController.cs*",
-              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\LocationsController.cs*",
-              "ViewState": "AQIAAB8AAAAAAAAAAAA8wC8AAAAJAAAA",
+              "Title": "PricingsController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\PricingsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\PricingsController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\PricingsController.cs*",
+              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\PricingsController.cs*",
+              "ViewState": "AQIAACIAAAAAAAAAAAAuwC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T15:39:56.997Z",
+              "WhenOpened": "2025-04-09T17:17:52.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdatePricingCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\UpdatePricingCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\UpdatePricingCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\UpdatePricingCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\UpdatePricingCommandHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:16:15.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RemovePricingCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\RemovePricingCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\RemovePricingCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\RemovePricingCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\RemovePricingCommandHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBMAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:16:12.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetPricingQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingQueryHandler.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:16:07.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreatePricingCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\CreatePricingCommandHandler.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:15:13.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetPricingByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\CarBook\\Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\Mediator\\Handlers\\PricingHandlers\\GetPricingByIdQueryHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:14:47.744Z",
               "EditorCaption": ""
             }
           ]
