@@ -2,7 +2,7 @@
 
 namespace CarBook.WebUI.Controllers
 {
-    public class AboutController1 : Controller
+    public class AboutController : Controller
     {
         public IActionResult Index()
         {
