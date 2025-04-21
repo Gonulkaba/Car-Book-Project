@@ -57,5 +57,55 @@ namespace CarBook.WebUI.Controllers
 			}
 			return View();
 		}
+
+		public async Task<IActionResult> RemoveCar(int id)
+		{
+			var client = _httpClientFactory.CreateClient();
+			var responseMessage = await client.DeleteAsync($"http://localhost:5000/api/Cars/{id}");
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
+
+		//Güncellenecek verinin bilgilerini güncelleme sayfasına taşıma.
+		[HttpGet]
+		public async Task<IActionResult> UpdateCar(int id)
+		{
+			var client = _httpClientFactory.CreateClient();
+			var responseMessage1 = await client.GetAsync("http://localhost:5000/api/Brands");
+			var jsonData1 = await responseMessage1.Content.ReadAsStringAsync();
+			var values1 = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData1);
+			List<SelectListItem> brandValues = (from x in values1
+												select new SelectListItem
+												{
+													Text = x.name,
+													Value = x.brandId.ToString()
+												}).ToList();
+			ViewBag.BrandValues = brandValues;
+			var responseMessage = await client.GetAsync($"http://localhost:5000/api/Cars/{id}");
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				var jsonData = await responseMessage.Content.ReadAsStringAsync();
+				var values = JsonConvert.DeserializeObject<UpdateCarDto>(jsonData);
+				return View(values);
+			}
+			return View();
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> UpdateCar(UpdateCarDto updateCarDto)
+		{
+			var client = _httpClientFactory.CreateClient();
+			var jsonData = JsonConvert.SerializeObject(updateCarDto);
+			StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+			var responseMessage = await client.PutAsync("http://localhost:5000/api/Cars/", stringContent);
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
 	}
 }
