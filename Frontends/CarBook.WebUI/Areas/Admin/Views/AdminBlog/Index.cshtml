@@ -31,7 +31,7 @@
                                             <th>Yazar</th>
                                             <th>Kategori</th>
                                             <th>Tarih</th>
-                                            <th>Kaldır</th>
+                                            <th>Sil</th>
                                             <th>Blogu Aç</th>
                                             <th>Blog Yorumları</th>
                                         </tr>
@@ -46,9 +46,9 @@
                                                 <td>@item.AuthorName</td>
                                                 <td>@item.CategoryID</td>
                                                 <td>@item.CreatedDate.ToShortDateString()</td>
-                                                <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogID" class="btn btn-outline-danger">Kaldır</a></td>
+                                                <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogID" class="btn btn-outline-danger">Sil</a></td>
                                                 <td><a href="/Blog/BlogDetail/@item.BlogID" class="btn btn-outline-secondary">Blogu Aç</a></td>
-                                                <td><a href="#" class="btn btn-outline-dark">Yorumlar</a></td>
+                                                <td><a href="/Admin/AdminComment/Index/@item.BlogID" class="btn btn-outline-warning">Yorumlar</a></td>
                                             </tr>
                                         }
                                     </tbody>
