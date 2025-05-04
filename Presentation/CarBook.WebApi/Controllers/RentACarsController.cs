@@ -1,4 +1,5 @@
 ﻿using CarBook.Application.Features.Mediator.Queries.RentACarQueries;
+using CarBook.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,15 @@ namespace CarBook.WebApi.Controllers
         {
             _mediator = mediator;
         }
-        [HttpPost]
-        public async Task<IActionResult> GetRentACarListByLocation(GetRentACarQuery query)
+        [HttpGet]
+        public async Task<IActionResult> GetRentACarListByLocation(int locationID, bool available)
         {
-            var values = await _mediator.Send(query);
+            GetRentACarQuery getRentACarQuery = new GetRentACarQuery()
+            {
+                Available = available,
+                LocationID = locationID
+            };
+            var values = await _mediator.Send(getRentACarQuery);
             return Ok(values);
         }
     }

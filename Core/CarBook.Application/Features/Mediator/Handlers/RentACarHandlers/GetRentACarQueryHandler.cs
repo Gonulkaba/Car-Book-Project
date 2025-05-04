@@ -25,7 +25,10 @@ namespace CarBook.Application.Features.Mediator.Handlers.RentACarHandlers
 			var results =  values.Select(x => new GetRentACarQueryResult
 			{
 				CarId = x.CarID,
-			}).ToList();
+                Brand = x.Car.Brand.Name,
+                Model = x.Car.Model,
+                CoverImageUrl = x.Car.CoverImageUrl
+            }).ToList();
 			return results;
 		}
 	}
