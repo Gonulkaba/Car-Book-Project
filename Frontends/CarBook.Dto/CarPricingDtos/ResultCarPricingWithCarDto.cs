@@ -8,7 +8,8 @@ namespace CarBook.Dto.CarPricingDtos
 {
 	public class ResultCarPricingWithCarDto
 	{
-		public int CarPricingID { get; set; }
+        public int CarID { get; set; }
+        public int CarPricingID { get; set; }
 		public string Brand { get; set; }
 		public string Model { get; set; }
 		public string CoverImageUrl { get; set; }
