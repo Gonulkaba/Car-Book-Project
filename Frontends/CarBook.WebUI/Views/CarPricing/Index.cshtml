@@ -1,0 +1,84 @@
+﻿@model List<ResultCarPricingListWithTimePeriodDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+	// Tüm araçlardan gelen TimePeriod adlarını birleştirip eşsiz liste oluştur (başlıklar için)
+	var timePeriods = new List<string>();
+
+	if (Model != null)
+	{
+		timePeriods = Model
+			.Where(x => x?.pricingDetails != null)
+			.SelectMany(x => x.pricingDetails)
+			.Where(p => !string.IsNullOrEmpty(p?.TimePeriodName))
+			.Select(p => p.TimePeriodName)
+			.Distinct()
+			.ToList();
+	}
+}
+
+<section class="ftco-section ftco-cart">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ftco-animate">
+				<div class="car-list">
+					<table class="table">
+						<thead class="thead-primary">
+							<tr class="text-center">
+								<th>&nbsp;</th>
+								<th>&nbsp;</th>
+								@foreach (var period in timePeriods)
+								{
+									<th class="bg-primary heading">@period Ücreti</th>
+								}
+							</tr>
+						</thead>
+						 @foreach (var item in Model)
+							{
+						    <tbody>
+								<tr class="">
+									<td class="car-image"><div class="img" style="background-image:url(@item.CoverImageUrl);"></div></td>
+									<td class="product-name">
+										<h3>@item.BrandName @item.Model</h3>
+										<p class="mb-0 rated">
+											<span>Puan:</span>
+											<span class="ion-ios-star"></span>
+											<span class="ion-ios-star"></span>
+											<span class="ion-ios-star"></span>
+											<span class="ion-ios-star"></span>
+											<span class="ion-ios-star"></span>
+										</p>
+									</td>
+									@foreach (var period in timePeriods)
+									{
+										var pricing = item.pricingDetails?.FirstOrDefault(p => p.TimePeriodName == period);
+										<td class="price">
+											@if (pricing != null)
+											{
+												<p class="btn-custom"><a href="#">Bu Aracı Kiralayın</a></p>
+												<div class="price-rate">
+													<h3>
+														<span class="num">
+															<small class="currency">₺</small> @pricing.Amount.ToString("N2")
+															<span class="per">/@period Ücreti</span>
+														</span>
+													</h3>
+												</div>
+											}
+											else
+											{
+												<span class="num text-danger">Satışta Değil</span>
+											}
+										</td>
+									}
+								</tr><!-- END TR-->
+							
+						</tbody>
+						}
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
