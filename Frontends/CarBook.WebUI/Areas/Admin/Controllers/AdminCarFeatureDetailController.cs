@@ -2,6 +2,7 @@
 using CarBook.Dto.FeatureDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
@@ -19,6 +20,7 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int id)
         {
+            ViewBag.CarId = id;
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("http://localhost:5000/api/CarFeatures?id="+id);
             if (responseMessage.IsSuccessStatusCode)
@@ -50,19 +52,50 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
             return RedirectToAction("Index", "AdminCar");
         }
 
-        [Route("CreateFeatureByCarId")]
+        [Route("CreateFeatureByCarId/{id}")]
         [HttpGet]
-        public async Task<IActionResult> CreateFeatureByCarId()
+        public async Task<IActionResult> CreateFeatureByCarId(int id)
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("http://localhost:5000/api/Features");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultFeatureDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<AssignFeatureToCarDto>>(jsonData);
+                ViewBag.CarId = id;
                 return View(values);
             }
+            ViewBag.CarId = id;
             return View();
+        }
+        [Route("CreateFeatureByCarId/{carId}")]
+        [HttpPost]
+        public async Task<IActionResult> CreateFeatureByCarId(List<AssignFeatureToCarDto> model, int carId)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            foreach (var item in model)
+            {
+                var carFeatureData = new
+                {
+                    CarID = carId,
+                    FeatureID = item.FeatureID,
+                    Available = item.Available
+                };
+
+                var jsonData = JsonConvert.SerializeObject(carFeatureData);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync("http://localhost:5000/api/CarFeatures", content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Hata Kodu: {response.StatusCode}, İçerik: {error}");
+                }
+            }
+
+            return RedirectToAction("Index", "AdminCar");
         }
     }
 }

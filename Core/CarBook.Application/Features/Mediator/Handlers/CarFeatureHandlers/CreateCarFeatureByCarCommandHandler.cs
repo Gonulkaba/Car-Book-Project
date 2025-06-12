@@ -23,7 +23,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarFeatureHandlers
         {
             _repository.CreateCarFeatureByCar(new CarFeature
             {
-                Available = false,
+                Available = request.Available,
                 CarID = request.CarID,
                 FeatureID = request.FeatureID
             });
