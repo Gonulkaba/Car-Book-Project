@@ -1,0 +1,52 @@
+﻿@model List<ResultCarPricingListWithTimePeriodDto>
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Araç Kiralama Ücretleri</h4>
+            <p class="card-subtitle mb-4 font-size-13">
+                Bazı araçların Günlük - Haftalık- Aylık kiralama fiyatları.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-centered table-hover table-xl mb-0" id="recent-orders">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">Marka</th>
+                            <th class="border-top-0">Model</th>
+                            <th class="border-top-0">Günlük Fiyat</th>
+                            <th class="border-top-0">Haftalık Fiyat</th>
+                            <th class="border-top-0">Aylık Fiyat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Take(5))
+                        {
+                            var daily = item.pricingDetails?.FirstOrDefault(x => x.TimePeriodName == "Günlük");
+                            var weekly = item.pricingDetails?.FirstOrDefault(x => x.TimePeriodName == "Haftalık");
+                            var monthly = item.pricingDetails?.FirstOrDefault(x => x.TimePeriodName == "Aylık");
+                            <tr>
+                                <td class="text-truncate">@item.BrandName</td>
+                                <td class="text-truncate">@item.Model</td>
+                                <td>
+                                    <span class="badge badge-soft-secondary p-2">
+                                        @(daily != null ? $"₺{daily.Amount:N2}" : "Yok")
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-soft-secondary p-2">
+                                        @(weekly != null ? $"₺{weekly.Amount:N2}" : "Yok")
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-soft-secondary p-2">
+                                        @(monthly != null ? $"₺{monthly.Amount:N2}" : "Yok")
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
