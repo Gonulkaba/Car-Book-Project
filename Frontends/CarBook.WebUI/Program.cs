@@ -1,16 +1,23 @@
+using CarBook.WebUI.Handlers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient();
+
+
+builder.Services.AddHttpContextAccessor(); // Token için
+builder.Services.AddTransient<AuthTokenHandler>();
+
+builder.Services.AddHttpClient("AuthorizedClient")
+    .AddHttpMessageHandler<AuthTokenHandler>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Index/";
     opt.LogoutPath = "/Login/LogOut/";
-    opt.AccessDeniedPath = "/Pages/AccessDenied/";
+    opt.AccessDeniedPath = "/Login/AccessDenied/";
     opt.Cookie.SameSite = SameSiteMode.Strict;
     opt.Cookie.HttpOnly = true;
     opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;

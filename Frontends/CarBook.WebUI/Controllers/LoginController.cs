@@ -60,7 +60,8 @@ namespace CarBook.WebUI.Controllers
 					}
 				}
 			}
-			return View();
+            ViewBag.LoginError = "Kullanıcı adı veya şifre hatalı.";
+            return View();
 		}
 
 		public async Task<IActionResult> LogOut()
@@ -68,5 +69,10 @@ namespace CarBook.WebUI.Controllers
 			await HttpContext.SignOutAsync();
 			return RedirectToAction("Index","Login");
 		}
-	}
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+    }
 }

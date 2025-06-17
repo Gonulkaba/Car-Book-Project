@@ -1,11 +1,13 @@
 ﻿using CarBook.Dto.BrandDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
-	public class AdminBrandController : Controller
+    [Authorize(Roles = "Admin")]
+    public class AdminBrandController : Controller
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
 

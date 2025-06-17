@@ -1,10 +1,12 @@
 ﻿using CarBook.Dto.FooterAddressDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/AdminFooterAddress")]
     public class AdminFooterAddressController : Controller

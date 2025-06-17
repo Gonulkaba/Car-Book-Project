@@ -1,10 +1,12 @@
 ﻿using CarBook.Dto.FeatureDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
 	public class AdminFeatureController : Controller
 	{
 		private readonly IHttpClientFactory _httpClientFactory;

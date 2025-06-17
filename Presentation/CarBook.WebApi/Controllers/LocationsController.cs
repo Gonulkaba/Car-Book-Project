@@ -18,12 +18,14 @@ namespace CarBook.WebApi.Controllers
         {
             _mediator = mediator;
         }
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> LocationList()
         {
             var values = await _mediator.Send(new GetLocationQuery());
             return Ok(values);
         }
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetLocation(int id)
         {

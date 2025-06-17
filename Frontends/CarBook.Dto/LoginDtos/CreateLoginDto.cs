@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,10 @@ namespace CarBook.Dto.LoginDtos
 {
 	public class CreateLoginDto
 	{
-		public string Username { get; set; }
-		public string Password { get; set; }
-	}
+        [Required(ErrorMessage = "Kullanıcı adı boş geçilemez.")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Şifre boş geçilemez.")]
+        public string Password { get; set; }
+    }
 }

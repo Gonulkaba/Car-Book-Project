@@ -48,6 +48,26 @@
                                             <div class="form-group">
                                                 <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Şifreniz" asp-for="Password">
                                             </div>
+                                            @if (!ViewData.ModelState.IsValid)
+                                            {
+                                                var firstError = ViewData.ModelState.Values
+                                                .SelectMany(v => v.Errors)
+                                                .Select(e => e.ErrorMessage)
+                                                .FirstOrDefault();
+
+                                                if (!string.IsNullOrEmpty(firstError))
+                                                {
+                                                    <div class="alert alert-danger py-2 px-3">
+                                                        <p class="mb-0">@firstError</p>
+                                                    </div>
+                                                }
+                                            }
+                                            else if (ViewBag.LoginError != null)
+                                            {
+                                                <div class="alert alert-danger py-2 px-3">
+                                                    <p class="mb-0">@ViewBag.LoginError</p>
+                                                </div>
+                                            }
                                             <button href="" class="btn btn-success btn-block waves-effect waves-light"> Giriş Yap </button>
                                         </form>
                                             <div class="text-center mt-4">

@@ -18,12 +18,7 @@ namespace CarBook.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var token = User.Claims.FirstOrDefault(x => x.Type == "accessToken")?.Value;
-
-            if (token != null)
-            {
                 var client = _httpClientFactory.CreateClient();
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 var responseMessage = await client.GetAsync("http://localhost:5000/api/Locations");
       
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -36,7 +31,6 @@ namespace CarBook.WebUI.Controllers
                                                 Value = x.LocationID.ToString()
                                             }).ToList();
                 ViewBag.v = values2;
-            }
             return View();
         }
         [HttpPost]
