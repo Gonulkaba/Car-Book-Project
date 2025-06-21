@@ -9,7 +9,7 @@
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center mb-0 text-white">
-                            #  @ViewBag.v
+                            # <strong id="carcount">@ViewBag.v</strong> <!--İlk veriyi ViewBagden al, sayfa açıldığında 2 sn bekleme-->
                         </h2>
                     </div>
                     <div class="col-4 text-right">
@@ -34,7 +34,7 @@
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center text-white mb-0">
-                            # @ViewBag.locationCount
+                            # <strong id="locationcount">@ViewBag.locationCount</strong>
                         </h2>
                     </div>
                     <div class="col-4 text-right">
@@ -54,12 +54,12 @@
             <div class="card-body">
                 <div class="mb-4">
                     <span class="badge badge-soft-light float-right">Marka Sayısı</span>
-                    <h5 class="card-title mb-0 text-white">Toplam Marka</h5>
+                    <h5 class="card-title mb-0 text-white">Toplam Marka Sayısı</h5>
                 </div>
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center text-white mb-0">
-                            # @ViewBag.brandCount
+                            # <strong id="brandcount">@ViewBag.brandCount</strong>
                         </h2>
                     </div>
                     <div class="col-4 text-right">
@@ -78,7 +78,7 @@
         <div class="card bg-info border-info">
             <div class="card-body">
                 <div class="mb-4">
-                    <span class="badge badge-soft-light float-right">Kiralama Ücreti</span>
+                    <span class="badge badge-soft-light float-right">Ortalama Fiyat</span>
                     <h5 class="card-title mb-0 text-white">Günlük Kiralama</h5>
                 </div>
                 <div class="row d-flex align-items-center mb-4">

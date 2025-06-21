@@ -183,5 +183,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapHub<CarHub>("/carhub");
+app.MapHub<LocationHub>("/locationhub");
+app.MapHub<BrandHub>("/brandhub");
 
 app.Run();

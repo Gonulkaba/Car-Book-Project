@@ -16,3 +16,69 @@
             @await Component.InvokeAsync("_AdminDashboardBlogListComponentPartial")
             </div>
     </div>
+
+	<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>Add commentMore actions
+
+	@section Scripts
+ {
+		<div class="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<script type="text/javascript">
+								$(document).ready(() => {
+									//CarHub bağlantısı
+									var connection = new signalR.HubConnectionBuilder().withUrl("http://localhost:5000/CarHub").build();
+									$("#constatus").text(connection.state);
+									connection.start().then(() => {
+										connection.invoke("SendCarCount");
+										setInterval(() => {
+											connection.invoke("SendCarCount");
+										}, 2000);
+
+									}).catch((err) => { console.log(err) });
+
+									connection.on("ReceiveCarCount", (value) => {
+										$("#carcount").text(value);
+									})
+
+									//LocationHub bağlantısı
+									var locationConnection = new signalR.HubConnectionBuilder().withUrl("http://localhost:5000/LocationHub").build();
+									$("#constatus").text(locationConnection.state);
+									locationConnection.start().then(() => {
+										$("#constatus").text(locationConnection.state); 
+										setInterval(() => {
+											locationConnection.invoke("SendLocationCount");
+										}, 2000);
+
+									}).catch((err) => { console.log(err) });
+
+									locationConnection.on("ReceiveLocationCount", (value) => {
+										$("#locationcount").text(value);
+									})
+
+									//BrandHub bağlantısı
+									var BrandConnection = new signalR.HubConnectionBuilder().withUrl("http://localhost:5000/BrandHub").build();
+									$("#constatus").text(BrandConnection.state);
+									BrandConnection.start().then(() => {
+										$("#constatus").text(BrandConnection.state);
+										setInterval(() => {
+											BrandConnection.invoke("SendBrandCount");
+										}, 2000);
+
+									}).catch((err) => { console.log(err) });
+
+									BrandConnection.on("ReceiveBrandCount", (value) => {
+										$("#brandcount").text(value);
+									})
+
+
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
