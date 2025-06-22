@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text;
 
 namespace CarBook.WebUI.Controllers
@@ -109,5 +110,18 @@ namespace CarBook.WebUI.Controllers
 			}
 			return View();
 		}
+
+        public async Task<IActionResult> GetCarListByBrandId(int id)
+		{
+			var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5000/api/Cars/GetCarListByBrandId?id={id}");
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<CarListByBrandIdDto>>(jsonData);
+				return View(values);
+            }
+			return View();
+}
     }
 }

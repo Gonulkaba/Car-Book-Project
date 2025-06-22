@@ -25,6 +25,11 @@ namespace CarBook.Persistence.Repositories.CarRepositories
             return value;
         }
 
+        public List<Car> GetCarListByBrandId(int id)
+        {
+            return _context.Cars.Include(y => y.Brand).Where(x => x.BrandID == id).ToList();
+        }
+
         public List<Car> GetCarsListWithBrands()
         {
             var values = _context.Cars.Include(x => x.Brand).ToList();

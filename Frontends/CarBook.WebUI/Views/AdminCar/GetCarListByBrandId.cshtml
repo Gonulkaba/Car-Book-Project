@@ -1,0 +1,61 @@
+﻿@model List<CarListByBrandIdDto>
+@{
+    ViewData["Title"] = "GetCarListByBrandId";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Markaya Ait Araçlar</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Görsel</th>
+                                        <th>Marka</th>
+                                        <th>Model</th>
+                                        <th>KM</th>
+                                        <th>Vites</th>
+                                        <th>Yakıt</th>
+                                        <th>Koltuk</th>
+                                        <th>Bagaj</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>
+                                                <img src="@item.CoverImageUrl" width="60" height="60" style="border-radius: 50%;" />
+                                            </td>
+                                            <td>@item.BrandName</td>
+                                            <td>@item.Model</td>
+                                            <td>@item.Km.ToString("N0") km</td>
+                                            <td>@item.Transmission</td>
+                                            <td>@item.Fuel</td>
+                                            <td>@item.Seat</td>
+                                            <td>@item.Luggage</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <a href="javascript:history.back()" class="btn btn-outline-primary mt-3">Geri Dön</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

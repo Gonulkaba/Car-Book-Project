@@ -1,7 +1,6 @@
 ﻿using CarBook.Application.Features.CQRS.Commands.CarCommands;
 using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook.Application.Features.CQRS.Queries.CarQueries;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers
@@ -17,8 +16,9 @@ namespace CarBook.WebApi.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarsWithBrandQueryHandler _getLast5CarsWithBrandQueryHandler;
+        private readonly GetCarListByBrandIdQueryHandler _getCarListByBrandIdQueryHandler;
 
-        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getLast5CarsWithBrandQueryHandler)
+        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getLast5CarsWithBrandQueryHandler, GetCarListByBrandIdQueryHandler getCarListByBrandIdQueryHandler)
         {
             _createCarCommandHandler = createCarCommandHandler;
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
@@ -27,6 +27,7 @@ namespace CarBook.WebApi.Controllers
             _removeCarCommandHandler = removeCarCommandHandler;
             _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
             _getLast5CarsWithBrandQueryHandler = getLast5CarsWithBrandQueryHandler;
+            _getCarListByBrandIdQueryHandler = getCarListByBrandIdQueryHandler;
         }
 
         [HttpGet]
@@ -71,6 +72,12 @@ namespace CarBook.WebApi.Controllers
         public IActionResult GetLast5CarsWithBrandQueryHandler()
         {
             var values = _getLast5CarsWithBrandQueryHandler.Handle();
+            return Ok(values);
+        }
+        [HttpGet("GetCarListByBrandId")]
+        public async Task<IActionResult> GetCarListByBrandId(int id)
+        {
+            var values = await _getCarListByBrandIdQueryHandler.Handle(new GetCarListByBrandIdQuery(id));
             return Ok(values);
         }
     }
