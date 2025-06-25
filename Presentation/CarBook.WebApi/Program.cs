@@ -36,6 +36,8 @@ using System.Text;
 using CarBook.Application.Tools;
 using Microsoft.OpenApi.Models;
 using CarBook.WebApi.Hubs;
+using CarBook.Application.Interfaces.CategoryInterfaces;
+using CarBook.Persistence.Repositories.CategoryRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -81,6 +83,7 @@ builder.Services.AddScoped(typeof(IRentACarRepository), typeof(RentACarRepositor
 builder.Services.AddScoped(typeof(ICarFeatureRepository), typeof(CarFeatureRepository));
 builder.Services.AddScoped(typeof(ICarDescriptionRepository), typeof(CarDescriptionRepository));
 builder.Services.AddScoped(typeof(IReviewRepository), typeof(ReviewRepository));
+builder.Services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<CreateAboutCommandHandler>();

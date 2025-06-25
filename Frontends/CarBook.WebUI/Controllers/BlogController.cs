@@ -26,9 +26,21 @@ namespace CarBook.WebUI.Controllers
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
-				var values = JsonConvert.DeserializeObject<List<ResultAllBlogsWithAuthorDto>>(jsonData);
-				return View(values);
-			}
+                var blogs = JsonConvert.DeserializeObject<List<ResultAllBlogsWithAuthorDto>>(jsonData);
+
+                // Her blog için yorum sayısını getir
+                foreach (var blog in blogs)
+                {
+                    var commentResponse = await client.GetAsync($"http://localhost:5000/api/Comments/CommentCountByBlog?id={blog.BlogID}");
+                    if (commentResponse.IsSuccessStatusCode)
+                    {
+                        var commentJson = await commentResponse.Content.ReadAsStringAsync();
+                        blog.CommentCount = int.Parse(commentJson);
+                    }
+                }
+
+                return View(blogs);
+            }
 			return View();
 		}
         public async Task<IActionResult> BlogDetail(int id)

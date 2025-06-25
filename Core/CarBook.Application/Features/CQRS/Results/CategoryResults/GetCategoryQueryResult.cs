@@ -10,5 +10,6 @@ namespace CarBook.Application.Features.CQRS.Results.CategoryResults
     {
         public int CategoryID { get; set; }
         public string Name { get; set; }
+        public int BlogCount { get; set; }
     }
 }

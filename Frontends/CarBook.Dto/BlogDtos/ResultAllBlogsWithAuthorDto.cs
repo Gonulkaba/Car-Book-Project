@@ -19,5 +19,6 @@ namespace CarBook.Dto.BlogDtos
 		public DateTime CreatedDate { get; set; }
 		public int CategoryID { get; set; }
         public string Description { get; set; }
+        public int CommentCount { get; set; }
     }
 }

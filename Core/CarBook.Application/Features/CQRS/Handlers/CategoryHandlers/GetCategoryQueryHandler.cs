@@ -1,5 +1,6 @@
 ﻿using CarBook.Application.Features.CQRS.Results.CategoryResults;
 using CarBook.Application.Interfaces;
+using CarBook.Application.Interfaces.CategoryInterfaces;
 using CarBook.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace CarBook.Application.Features.CQRS.Handlers.CategoryHandlers
 {
     public class GetCategoryQueryHandler
     {
-        private readonly IRepository<Category> _repository;
+        private readonly ICategoryRepository _repository;
 
-        public GetCategoryQueryHandler(IRepository<Category> repository)
+        public GetCategoryQueryHandler(ICategoryRepository repository)
         {
             _repository = repository;
         }
@@ -24,6 +25,7 @@ namespace CarBook.Application.Features.CQRS.Handlers.CategoryHandlers
             {
                 Name = x.Name,
                 CategoryID= x.CategoryID,
+                BlogCount = x.Blogs.Count()
             }).ToList(); ;
         }
     }
