@@ -5,31 +5,68 @@
 }
 
 <section class="ftco-section">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-            @foreach(var item in Model){
-          <div class="col-md-12 text-center d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end mb-md-5">
-              <a href="blog-single.html" class="block-20 img" style="background-image: url('@item.CoverImageUrl');">
-              </a>
-              <div class="text px-md-5 pt-4">
-              	<div class="meta mb-3">
-                  <div><a href="#">@item.CreatedDate.ToShortDateString()</a></div>
-                  <div><a href="#">@item.AuthorName</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> @item.CommentCount</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="/Blog/BlogDetail/@item.BlogID">@item.Title</a></h3>
-               <p>
-                  @(item.Description.Length > 250
-                  ? item.Description.Substring(0, 250) + "..."
-                  : item.Description)
-               </p>
-                <p><a href="/Blog/BlogDetail/@item.BlogID" class="btn btn-primary">Devamını Oku<span class="icon-long-arrow-right"></span></a></p>
-              </div>
-            </div>
-          </div>
-            }
+    <div class="container">
+        <div class="row d-flex justify-content-center" id="blog-list">
+            <!-- Blog kartları buraya AJAX ile gelecek -->
         </div>
-      </div>
-    </section>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul id="pagination">
+                        <!-- Sayfa numaraları buraya AJAX ile gelecek -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/pagination.js"></script>
+    <script>
+        $(document).ready(function () {
+            function loadBlogs(page) {
+                $.ajax({
+                    url: '/Blog/GetBlogs',
+                    type: 'GET',
+                    data: { page: page },
+                    success: function (response) {
+                        if (response.success) {
+                            renderBlogs(response.data);
+                            createPagination('#pagination', response.totalPages, response.currentPage, loadBlogs);
+                        }
+                    }
+                });
+            }
+
+            function renderBlogs(blogs) {
+                var html = '';
+                $.each(blogs, function (i, item) {
+                    html += `
+                            <div class="col-md-12 text-center d-flex">
+                                <div class="blog-entry justify-content-end mb-md-5">
+                                    <a href="/Blog/BlogDetail/${item.blogID}" class="block-20 img" style="background-image: url('${item.coverImageUrl}');">
+                                    </a>
+                                    <div class="text px-md-5 pt-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">${new Date(item.createdDate).toLocaleDateString()}</a></div>
+                                            <div><a href="#">${item.authorName}</a></div>
+                                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> ${item.commentCount}</a></div>
+                                        </div>
+                                        <h3 class="heading mt-2"><a href="/Blog/BlogDetail/${item.blogID}">${item.title}</a></h3>
+                                        <p>${item.description.length > 250 ? item.description.substring(0, 250) + "..." : item.description}</p>
+                                        <p><a href="/Blog/BlogDetail/${item.blogID}" class="btn btn-primary">Devamını Oku <span class="icon-long-arrow-right"></span></a></p>
+                                    </div>
+                                </div>
+                            </div>`;
+                });
+                $('#blog-list').html(html);
+            }
+
+            loadBlogs(1); // Sayfa açıldığında 1. sayfa
+        });
+    </script>
+}
 

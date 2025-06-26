@@ -5,27 +5,67 @@
     Layout = "~/Views/UILayout/Index.cshtml";
 }
 <section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row">
-            @foreach(var item in Model)
-            {
-                <div class="col-md-4">
-                    <div class="car-wrap rounded ftco-animate">
-                        <div class="img rounded d-flex align-items-end" style="background-image: url(@item.CoverImageUrl);">
-                        </div>
-                        <div class="text">
-                            <h2 class="mb-0"><a href="car-single.html">@item.Model</a></h2>
-                            <div class="d-flex mb-3">
-                                <span class="cat">@item.Brand</span>
-                                <p class="price ml-auto">@item.Amount <span>/Günlük</span></p>
-                            </div>
-                            <p class="d-flex mb-0 d-block"><a href="/Reservation/Index/@item.CarID" class="btn btn-primary py-2 mr-1">Hemen Kirala</a> <a href="/Car/CarDetail/@item.CarID" class="btn btn-secondary py-2 ml-1">Detaylar</a></p>
-                        </div>
-                    </div>
+    <div class="container">
+        <div id="car-list" class="row">
+            <!-- Araçlar buraya AJAX ile gelecek -->
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul id="pagination">
+                        <!-- Sayfa numaraları buraya AJAX ile gelecek -->
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/pagination.js"></script>
+    <script>
+        $(document).ready(function () {
+            function loadCars(page) {
+                $.ajax({
+                    url: '/Car/GetCars',
+                    type: 'GET',
+                    data: { page: page },
+                    success: function (response) {
+                        if (response.success) {
+                            renderCars(response.data);
+                            createPagination('#pagination', response.totalPages, response.currentPage, loadCars);
+                        }
+                    }
+                });
             }
-            
-    		</div>
-    	</div>
-    </section>
+
+            function renderCars(cars) {
+                var html = '';
+                $.each(cars, function (i, car) {
+                    html += `
+                                <div class="col-md-4 mb-4">
+                                    <div class="car-wrap rounded">
+                                        <div class="img rounded d-flex align-items-end" style="background-image: url(${car.coverImageUrl});"></div>
+                                        <div class="text">
+                                            <h2 class="mb-0"><a href="#">${car.model}</a></h2>
+                                            <div class="d-flex mb-3">
+                                                <span class="cat">${car.brand}</span>
+                                                <p class="price ml-auto">${car.amount} <span>/Günlük</span></p>
+                                            </div>
+                                            <p class="d-flex mb-0 d-block">
+                                                <a href="/Reservation/Index/${car.carID}" class="btn btn-primary py-2 mr-1">Hemen Kirala</a>
+                                                <a href="/Car/CarDetail/${car.carID}" class="btn btn-secondary py-2 ml-1">Detaylar</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>`;
+                });
+                $('#car-list').html(html);
+            }
+
+            loadCars(1);
+        });
+    </script>
+}
 

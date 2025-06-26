@@ -2,19 +2,6 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/UILayout/Index.cshtml";
-	// Tüm araçlardan gelen TimePeriod adlarını birleştirip eşsiz liste oluştur (başlıklar için)
-	var timePeriods = new List<string>();
-
-	if (Model != null)
-	{
-		timePeriods = Model
-			.Where(x => x?.pricingDetails != null)
-			.SelectMany(x => x.pricingDetails)
-			.Where(p => !string.IsNullOrEmpty(p?.TimePeriodName))
-			.Select(p => p.TimePeriodName)
-			.Distinct()
-			.ToList();
-	}
 }
 
 <section class="ftco-section ftco-cart">
@@ -22,63 +9,94 @@
 		<div class="row">
 			<div class="col-md-12 ftco-animate">
 				<div class="car-list">
-					<table class="table">
-						<thead class="thead-primary">
-							<tr class="text-center">
-								<th>&nbsp;</th>
-								<th>&nbsp;</th>
-								@foreach (var period in timePeriods)
-								{
-									<th class="bg-primary heading">@period Ücreti</th>
-								}
-							</tr>
-						</thead>
-						 @foreach (var item in Model)
-							{
-						    <tbody>
-								<tr class="">
-									<td class="car-image"><div class="img" style="background-image:url(@item.CoverImageUrl);"></div></td>
-									<td class="product-name">
-										<h3>@item.BrandName @item.Model</h3>
-										<p class="mb-0 rated">
-											<span>Puan:</span>
-											<span class="ion-ios-star"></span>
-											<span class="ion-ios-star"></span>
-											<span class="ion-ios-star"></span>
-											<span class="ion-ios-star"></span>
-											<span class="ion-ios-star"></span>
-										</p>
-									</td>
-									@foreach (var period in timePeriods)
-									{
-										var pricing = item.pricingDetails?.FirstOrDefault(p => p.TimePeriodName == period);
-										<td class="price">
-											@if (pricing != null)
-											{
-												<p class="btn-custom"><a href="#">Bu Aracı Kiralayın</a></p>
-												<div class="price-rate">
-													<h3>
-														<span class="num">
-															<small class="currency">₺</small> @pricing.Amount.ToString("N2")
-															<span class="per">/@period Ücreti</span>
-														</span>
-													</h3>
-												</div>
-											}
-											else
-											{
-												<span class="num text-danger">Satışta Değil</span>
-											}
-										</td>
-									}
-								</tr><!-- END TR-->
-							
-						</tbody>
-						}
+					<table class="table" id="pricing-table">
+						<!-- AJAX ile tablo içeriği buraya gelecek -->
 					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col text-center">
+				<div class="block-27">
+					<ul id="pagination">
+						<!-- Sayfa numaraları buraya gelecek -->
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+@section Scripts {
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="~/js/pagination.js"></script>
+	<script>
+		$(document).ready(function () {
+			function loadCarPricings(page) {
+				$.ajax({
+					url: '/CarPricing/GetPaginatedPricings',
+					type: 'GET',
+					data: { page: page },
+					success: function (response) {
+						if (response.success) {
+							renderTable(response.data, response.timePeriods);
+							createPagination('#pagination', response.totalPages, response.currentPage, loadCarPricings);
+						}
+					}
+				});
+			}
+
+			function renderTable(carList, timePeriods) {
+				var html = '';
+				html += `
+							<thead class="thead-primary">
+								<tr class="text-center">
+									<th>&nbsp;</th>
+									<th>&nbsp;</th>`;
+				$.each(timePeriods, function (i, period) {
+					html += `<th class="bg-primary heading">${period} Ücreti</th>`;
+				});
+				html += `</tr></thead><tbody>`;
+
+				$.each(carList, function (i, item) {
+					html += `<tr>
+								<td class="car-image"><div class="img" style="background-image:url(${item.coverImageUrl});"></div></td>
+								<td class="product-name">
+									<h3>${item.brandName} ${item.model}</h3>
+									<p class="mb-0 rated">
+										<span>Puan:</span>
+										<span class="ion-ios-star"></span>
+										<span class="ion-ios-star"></span>
+										<span class="ion-ios-star"></span>
+										<span class="ion-ios-star"></span>
+										<span class="ion-ios-star"></span>
+									</p>
+								</td>`;
+
+					$.each(timePeriods, function (j, period) {
+						var pricing = item.pricingDetails.find(p => p.timePeriodName === period);
+						if (pricing) {
+							html += `<td class="price">
+										<p class="btn-custom"><a href="#">Bu Aracı Kiralayın</a></p>
+										<div class="price-rate">
+											<h3><span class="num"><small class="currency">₺</small> ${pricing.amount.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} <span class="per">/${period} Ücreti</span></span></h3>
+										</div>
+									</td>`;
+						} else {
+							html += `<td class="price"><span class="num text-danger">Satışta Değil</span></td>`;
+						}
+					});
+
+					html += `</tr>`;
+				});
+				html += `</tbody>`;
+
+				$('#pricing-table').html(html);
+			}
+
+			loadCarPricings(1);
+		});
+	</script>
+}
 

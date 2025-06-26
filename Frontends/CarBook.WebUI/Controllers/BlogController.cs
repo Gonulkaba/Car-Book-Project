@@ -20,29 +20,42 @@ namespace CarBook.WebUI.Controllers
 		{
 			ViewBag.v1 = "Bloglar";
 			ViewBag.v2 = "Yazarlarımızın Blogları";
-
-			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("http://localhost:5000/api/Blogs/GetAllBlogsWithAuthorList");
-			if (responseMessage.IsSuccessStatusCode)
-			{
-				var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var blogs = JsonConvert.DeserializeObject<List<ResultAllBlogsWithAuthorDto>>(jsonData);
-
-                // Her blog için yorum sayısını getir
-                foreach (var blog in blogs)
-                {
-                    var commentResponse = await client.GetAsync($"http://localhost:5000/api/Comments/CommentCountByBlog?id={blog.BlogID}");
-                    if (commentResponse.IsSuccessStatusCode)
-                    {
-                        var commentJson = await commentResponse.Content.ReadAsStringAsync();
-                        blog.CommentCount = int.Parse(commentJson);
-                    }
-                }
-
-                return View(blogs);
-            }
 			return View();
 		}
+        [HttpGet]
+        public async Task<IActionResult> GetBlogs(int page = 1, int pageSize = 3)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:5000/api/Blogs/GetAllBlogsWithAuthorList");
+
+            if (!responseMessage.IsSuccessStatusCode)
+                return Json(new { success = false });
+
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var allBlogs = JsonConvert.DeserializeObject<List<ResultAllBlogsWithAuthorDto>>(jsonData);
+
+            // Yorum sayısı dahil
+            foreach (var blog in allBlogs)
+            {
+                var commentResponse = await client.GetAsync($"http://localhost:5000/api/Comments/CommentCountByBlog?id={blog.BlogID}");
+                if (commentResponse.IsSuccessStatusCode)
+                {
+                    var commentJson = await commentResponse.Content.ReadAsStringAsync();
+                    blog.CommentCount = int.Parse(commentJson);
+                }
+            }
+
+            var pagedBlogs = allBlogs.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var totalPages = (int)Math.Ceiling((double)allBlogs.Count / pageSize);
+
+            return Json(new
+            {
+                success = true,
+                data = pagedBlogs,
+                totalPages,
+                currentPage = page
+            });
+        }
         public async Task<IActionResult> BlogDetail(int id)
         {
             ViewBag.v1 = "Bloglar";
