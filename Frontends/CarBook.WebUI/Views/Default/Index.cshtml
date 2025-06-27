@@ -28,25 +28,25 @@
                                 <h2>Şimdi Aracınızı Kiralayın</h2>
                                 <div class="form-group">
                                     <label for="" class="label">Alınacak Lokasyon</label>
-                                    @Html.DropDownListFor(x => x.LocationID, (List<SelectListItem>)ViewBag.v, "Seçiniz", new { @class = "form-control", @id="drop" })
+                                    @Html.DropDownListFor(x => x.LocationID, (List<SelectListItem>)ViewBag.v, "Seçiniz", new { @class = "form-control", @id = "drop", @required = "required" })
                                 </div>
                                 <div class="d-flex">
                                     <div class="form-group mr-2">
                                         <label for="" class="label">Alınmak İstenen Tarih</label>
-                                        <input type="text" class="form-control" name="book_pick_date" id="book_pick_date" placeholder="Tarih Seçiniz">
+                                        <input type="text" class="form-control" name="book_pick_date" id="book_pick_date" placeholder="Tarih Seçiniz" required>
                                     </div>
                                     <div class="form-group ml-2">
                                         <label for="" class="label">İade Tarihi</label>
-                                        <input type="text" class="form-control" name="book_off_date" id="book_off_date" placeholder="Tarih Seçiniz">
+                                        <input type="text" class="form-control" name="book_off_date" id="book_off_date" placeholder="Tarih Seçiniz" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="label">Alış Saati</label>
-                                    <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Saat Seçiniz">
+                                    <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Saat Seçiniz" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="label">İade Saati</label>
-                                    <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Saat Seçiniz">
+                                    <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Saat Seçiniz" required>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-secondary py-3 px-4">Uygun Araçları Listele</button>

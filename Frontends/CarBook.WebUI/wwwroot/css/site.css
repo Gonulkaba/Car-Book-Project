@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.bg-login {
+    background-image: url('/images/login-car.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bg-register {
+    background-image: url('/images/register-car.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+bg-register

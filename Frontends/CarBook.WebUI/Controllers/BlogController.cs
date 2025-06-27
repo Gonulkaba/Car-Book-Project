@@ -83,7 +83,7 @@ namespace CarBook.WebUI.Controllers
             var responseMessage = await client.PostAsync("http://localhost:5000/api/Comments/CreateCommentWithMediator", content);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "Default");
+                return RedirectToAction("BlogDetail", "Blog", new { id = createCommentDto.BlogId });
             }
             return View();
         }

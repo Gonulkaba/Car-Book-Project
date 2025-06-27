@@ -17,7 +17,9 @@ namespace CarBook.WebUI.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			return View();
+            ViewBag.v1 = "İLETİŞİM";
+			ViewBag.v2 = "Bize Ulaşın";
+            return View();
 		}
 		[HttpPost]
 		public async Task<IActionResult> Index(CreateContactDto createContactDto)

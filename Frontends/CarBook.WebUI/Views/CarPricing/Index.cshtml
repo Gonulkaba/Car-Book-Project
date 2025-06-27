@@ -78,7 +78,7 @@
 						var pricing = item.pricingDetails.find(p => p.timePeriodName === period);
 						if (pricing) {
 							html += `<td class="price">
-										<p class="btn-custom"><a href="#">Bu Aracı Kiralayın</a></p>
+										<p class="btn-custom"><a href="/Reservation/Index/${item.carID}">Bu Aracı Kiralayın</a></p>
 										<div class="price-rate">
 											<h3><span class="num"><small class="currency">₺</small> ${pricing.amount.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} <span class="per">/${period} Ücreti</span></span></h3>
 										</div>
