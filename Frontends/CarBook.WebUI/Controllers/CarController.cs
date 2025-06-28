@@ -1,7 +1,9 @@
 ﻿using CarBook.Dto.CarDtos;
 using CarBook.Dto.CarPricingDtos;
+using CarBook.Dto.ReviewDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -52,5 +54,32 @@ namespace CarBook.WebUI.Controllers
 
             return View();
         }
-    }
+		[HttpGet]
+		public PartialViewResult AddReview()
+		{
+			return PartialView();
+		}
+		[HttpPost]
+		public async Task<IActionResult> AddReview(CreateReviewDto createReviewDto)
+		{
+			if (!ModelState.IsValid)
+			{
+				TempData["ReviewError"] = "Lütfen eksik veya hatalı alanları düzeltin.";
+				return RedirectToAction("CarDetail", new { id = createReviewDto.CarID });
+			}
+			var client = _httpClientFactory.CreateClient();
+			var jsonData = JsonConvert.SerializeObject(createReviewDto);
+			StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+			var responseMessage = await client.PostAsync("http://localhost:5000/api/Reviews", content);
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				TempData["ReviewSuccess"] = "Yorumunuz başarıyla kaydedildi.";
+			}
+			else
+			{
+				TempData["ReviewError"] = "Sunucu hatası oluştu. Lütfen tekrar deneyin.";
+			}
+            return RedirectToAction("CarDetail", new { id = createReviewDto.CarID });
+        }
+	}
 }

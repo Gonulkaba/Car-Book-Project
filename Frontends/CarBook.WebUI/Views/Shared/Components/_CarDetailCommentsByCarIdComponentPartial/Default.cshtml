@@ -32,7 +32,9 @@
 					</div>
 				</div>
 			}
-				</div>
+			@await Html.PartialAsync("~/Views/Car/AddReview.cshtml", new CarBook.Dto.ReviewDtos.CreateReviewDto { CarID = ViewBag.carid })
+		</div>
+
 		<div class="col-md-5">
 			<div class="rating-wrap">
 				<h3 class="head">Değerlendirme Sonuçları</h3>

@@ -1,0 +1,89 @@
+﻿@model CarBook.Dto.ReviewDtos.CreateReviewDto
+
+<div class="comment-form-wrap pt-5">
+    <h3 class="mb-5">Araca Yorum Yapın</h3>
+
+    @if (TempData["ReviewSuccess"] != null)
+    {
+        <div class="alert alert-success">@TempData["ReviewSuccess"]</div>
+    }
+    @if (TempData["ReviewError"] != null)
+    {
+        <div class="alert alert-danger">@Html.Raw(TempData["ReviewError"])</div>
+    }
+
+    <form method="post" asp-action="AddReview" asp-controller="Car" class="p-5 bg-light">
+        <input type="hidden" asp-for="CarID" value="@Model.CarID" />
+        <input type="hidden" asp-for="CustomerImage" id="CustomerImage" />
+
+        <div class="form-group">
+            <label asp-for="CustomerName">Adınız Soyadınız *</label>
+            <input asp-for="CustomerName" class="form-control" />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Comment">Yorumunuz *</label>
+            <textarea asp-for="Comment" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Comment" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Puanınız *</label>
+            <div id="star-rating" class="mb-2">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <i class="ion-ios-star-outline star" data-value="@i" style="font-size: 24px; color: gold; cursor: pointer;"></i>
+                }
+            </div>
+            <input type="hidden" asp-for="RatingValue" id="RatingValue" />
+            <span asp-validation-for="RatingValue" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Yorumu Gönder" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let selectedValue = 0;
+
+        $(".star").on("click", function () {
+            selectedValue = $(this).data("value");
+            $("#RatingValue").val(selectedValue);
+
+            $(".star").each(function () {
+                if ($(this).data("value") <= selectedValue) {
+                    $(this).removeClass("ion-ios-star-outline").addClass("ion-ios-star");
+                } else {
+                    $(this).removeClass("ion-ios-star").addClass("ion-ios-star-outline");
+                }
+            });
+            $("span[data-valmsg-for='RatingValue']").text("");
+        });
+
+        // İsim girildiğinde otomatik avatar oluştur
+        $('input[name="CustomerName"]').on("blur", function () {
+            let name = $(this).val();
+            if (name.trim().length > 0) {
+                let encodedName = encodeURIComponent(name.trim());
+                let imageUrl = `https://ui-avatars.com/api/?name=${encodedName}&background=BDC3C7&color=ffffff&length=2&size=64`;
+                $('#CustomerImage').val(imageUrl);
+            }
+        });
+
+        // Form gönderilmeden önce Rating kontrolü
+        $('form').on('submit', function (e) {
+            var rating = $("#RatingValue").val();
+            if (!rating || rating == 0) {
+                e.preventDefault(); // formu gönderme
+                $("span[data-valmsg-for='RatingValue']").text("Lütfen bir puan seçin.");
+                return false;
+            }
+        });
+    });
+</script>

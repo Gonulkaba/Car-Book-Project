@@ -24,16 +24,25 @@ namespace CarBook.WebUI.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Index(CreateContactDto createContactDto)
 		{
-			var client = _httpClientFactory.CreateClient();
+            if (!ModelState.IsValid)
+            {
+                TempData["ContactError"] = "Lütfen eksik veya hatalı alanları düzeltin.";
+                return View(createContactDto);
+            }
+            var client = _httpClientFactory.CreateClient();
 			createContactDto.SendDate=DateTime.Now;
 			var jsonData = JsonConvert.SerializeObject(createContactDto);
 			StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
 			var responseMessage = await client.PostAsync("http://localhost:5000/api/Contacts", stringContent);
 			if (responseMessage.IsSuccessStatusCode)
 			{
-				return RedirectToAction("Index", "Default");
-			}
-			return View();
-		}
+                TempData["ContactSuccess"] = "Mesajınız başarıyla iletildi.";
+            }
+            else
+            {
+                TempData["ContactError"] = "Sunucu hatası oluştu. Lütfen tekrar deneyin.";
+            }
+            return RedirectToAction("Index");
+        }
 	}
 }

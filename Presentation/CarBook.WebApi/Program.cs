@@ -38,6 +38,7 @@ using Microsoft.OpenApi.Models;
 using CarBook.WebApi.Hubs;
 using CarBook.Application.Interfaces.CategoryInterfaces;
 using CarBook.Persistence.Repositories.CategoryRepositories;
+using CarBook.Application.Validators.ContactValidators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -132,6 +133,7 @@ builder.Services.AddControllers()
 	{
 		x.RegisterValidatorsFromAssemblyContaining<CreateReviewValidator>();
 		x.RegisterValidatorsFromAssemblyContaining<UpdateReviewValidator>();
+		x.RegisterValidatorsFromAssemblyContaining<CreateContactValidator>();
 	});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

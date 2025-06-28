@@ -9,18 +9,26 @@
         <div class="row d-flex mb-5 contact-info">
             @await Component.InvokeAsync("_FooterAddressComponentPartial")
           <div class="col-md-8 block-9 mb-md-5">
+                @if (TempData["ContactSuccess"] != null)
+                {
+                    <div class="alert alert-success">@TempData["ContactSuccess"]</div>
+                }
+                @if (TempData["ContactError"] != null)
+                {
+                    <div class="alert alert-danger">@Html.Raw(TempData["ContactError"])</div>
+                }
             <form class="bg-light p-5 contact-form" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Adınız Soyadınız:" asp-for="Name">
+                        <input type="text" class="form-control" placeholder="Adınız Soyadınız:" asp-for="Name"> <span asp-validation-for="Name" class="text-danger"></span>
               </div>
               <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email Adresiniz:" asp-for="Email">
+                        <input type="text" class="form-control" placeholder="Email Adresiniz:" asp-for="Email"><span asp-validation-for="Email" class="text-danger"></span>
               </div>
               <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Konu:" asp-for="Subject">
+                        <input type="text" class="form-control" placeholder="Konu:" asp-for="Subject"><span asp-validation-for="Subject" class="text-danger"></span>
               </div>
               <div class="form-group">
-                        <textarea asp-for="Message" cols="30" rows="7" class="form-control" placeholder="Mesajınız:"></textarea>
+                        <textarea asp-for="Message" cols="30" rows="7" class="form-control" placeholder="Mesajınız:"></textarea> <span asp-validation-for="Message" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <input type="submit" value="Mesajı Gönder" class="btn btn-primary py-3 px-5">
@@ -36,4 +44,6 @@
         </div>
       </div>
     </section>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>

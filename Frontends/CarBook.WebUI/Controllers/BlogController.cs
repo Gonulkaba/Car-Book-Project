@@ -77,15 +77,24 @@ namespace CarBook.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddComment(CreateCommentDto createCommentDto)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["CommentError"] = "Lütfen eksik veya hatalı alanları düzeltin.";
+                return RedirectToAction("BlogDetail", new { id = createCommentDto.BlogId });
+            }
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createCommentDto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var responseMessage = await client.PostAsync("http://localhost:5000/api/Comments/CreateCommentWithMediator", content);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("BlogDetail", "Blog", new { id = createCommentDto.BlogId });
+                TempData["CommentSuccess"] = "Yorumunuz başarıyla kaydedildi.";
             }
-            return View();
+            else
+            {
+                TempData["CommentError"] = "Sunucu hatası oluştu. Lütfen tekrar deneyin.";
+            }
+            return RedirectToAction("BlogDetail", new { id = createCommentDto.BlogId });
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using CarBook.Dto.LocationDtos;
+﻿using CarBook.Dto.CommentDtos;
+using CarBook.Dto.ContactDtos;
+using CarBook.Dto.LocationDtos;
 using CarBook.Dto.ReservationDtos;
 using CarBook.Dto.TestimonialDtos;
 using Microsoft.AspNetCore.Mvc;
@@ -41,6 +43,11 @@ namespace CarBook.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CreateReservationDto createReservationDto)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["ReservationError"] = "Lütfen eksik veya hatalı alanları düzeltin.";
+                return View(createReservationDto);
+            }
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createReservationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -48,10 +55,13 @@ namespace CarBook.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "Default");
+                TempData["ReservationSuccess"] = "Rezervasyon işlemi başarıyla gerçekleştirildi.";
             }
-
-            return View(createReservationDto);
+            else
+            {
+                TempData["ReservationError"] = "Sunucu hatası oluştu. Lütfen tekrar deneyin.";
+            }
+            return RedirectToAction("Index");
         }
     }
 }
