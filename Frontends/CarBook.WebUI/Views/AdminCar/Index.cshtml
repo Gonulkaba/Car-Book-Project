@@ -16,7 +16,7 @@
                            Arabalarla ilgili ekleme, silme, güncelleme, arama ve listeleme gibi işlemleri bu sayfa üzerinden gerçekleştirebilirsiniz.
                         </p>
                         <div class="table-responsive">
-                            <table class="table mb-0">
+                            <table class="table mb-0 w-100 datatable-common">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -58,4 +58,4 @@
         </div>
     </div> 
 </div>
-
+@await Html.PartialAsync("_DataTableScriptPartial")

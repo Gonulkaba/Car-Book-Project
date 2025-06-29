@@ -22,10 +22,11 @@
                         else
                         {
                             <div class="table-responsive">
-                                <table class="table mb-0">
+                                <table class="table mb-0 w-100 datatable-common">
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Profil</th>
                                             <th>Ad Soyad</th>
                                             <th>Başlık</th>
                                             <th>Yorum</th>
@@ -58,6 +59,4 @@
         </div>
     </div>
 </div>
-
-
-
+@await Html.PartialAsync("_DataTableScriptPartial")
