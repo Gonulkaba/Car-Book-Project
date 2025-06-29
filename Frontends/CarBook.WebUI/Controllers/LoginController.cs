@@ -48,6 +48,11 @@ namespace CarBook.WebUI.Controllers
 					if (tokenModel.Token != null)
 					{
 						claims.Add(new Claim("accessToken", tokenModel.Token));
+						var nameClaim = claims.FirstOrDefault(c => c.Type == "Username")?.Value;
+						if (!string.IsNullOrEmpty(nameClaim))
+						{
+							claims.Add(new Claim(ClaimTypes.Name, nameClaim)); 
+						}
 						var claimsIdentity = new ClaimsIdentity(claims, JwtBearerDefaults.AuthenticationScheme);
 						var authProps = new AuthenticationProperties
 						{

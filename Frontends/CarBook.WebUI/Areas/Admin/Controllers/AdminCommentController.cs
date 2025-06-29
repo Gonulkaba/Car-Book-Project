@@ -31,5 +31,16 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
             }
             return View();
         }
+        [Route("RemoveComment/{commentId}/{blogId}")]
+        public async Task<IActionResult> RemoveComment(int commentId, int blogId)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync($"http://localhost:5000/api/Comments/{commentId}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index", "AdminComment", new { area = "Admin", id = blogId });
+            }
+            return View();
+        }
     }
 }

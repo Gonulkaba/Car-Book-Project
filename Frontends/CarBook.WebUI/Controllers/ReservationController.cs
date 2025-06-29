@@ -3,13 +3,16 @@ using CarBook.Dto.ContactDtos;
 using CarBook.Dto.LocationDtos;
 using CarBook.Dto.ReservationDtos;
 using CarBook.Dto.TestimonialDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
+    [Authorize]
     public class ReservationController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -25,19 +28,26 @@ namespace CarBook.WebUI.Controllers
             ViewBag.v2 = "Araç Rezervasyon Formu";
             ViewBag.v3 = id;
 
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://localhost:5000/api/Locations");
+            var token = User.Claims.FirstOrDefault(x => x.Type == "accessToken")?.Value;
 
-            var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
+            if (token != null)
+            {
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            List<SelectListItem> values2 = (from x in values
-                                            select new SelectListItem
-                                            {
-                                                Text = x.Name,
-                                                Value = x.LocationID.ToString()
-                                            }).ToList();
-            ViewBag.v = values2;
+                var responseMessage = await client.GetAsync("http://localhost:5000/api/Locations");
+
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
+
+                List<SelectListItem> values2 = (from x in values
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.Name,
+                                                    Value = x.LocationID.ToString()
+                                                }).ToList();
+                ViewBag.v = values2;
+            }
             return View();
         }
         [HttpPost]

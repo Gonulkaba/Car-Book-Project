@@ -17,6 +17,8 @@ namespace CarBook.WebUI.Controllers
         }
         public async Task<IActionResult> Index(int id)
         {
+            ViewBag.v1 = "Araçlar";
+            ViewBag.v2 = "Seçiminize Uygun Araçlar";
             var locationID = TempData["locationID"];
 
             ViewBag.locationID = locationID;
